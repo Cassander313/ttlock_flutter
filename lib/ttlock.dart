@@ -82,136 +82,224 @@ class TTLock {
     final bool isEnabled = await _commandChannel.invokeMethod('isLocationEnabled');
     return isEnabled;
   }
+  /// Command to start scanning for locks.
   static const String COMMAND_START_SCAN_LOCK = "startScanLock";
+  /// Command to stop scanning for locks.
   static const String COMMAND_STOP_SCAN_LOCK = "stopScanLock";
+  /// Command to get the Bluetooth state.
   static const String COMMAND_GET_BLUETOOTH_STATE = "getBluetoothState";
+  /// Command to prepare the Bluetooth service.
   static const String COMMAND_PREPARE_BT_SERVICE = "prepareBTService";
+  /// Command to initialize a lock.
   static const String COMMAND_INIT_LOCK = "initLock";
+  /// Command to reset a lock.
   static const String COMMAND_RESET_LOCK = "resetLock";
 
+  /// Command to control a lock.
   static const String COMMAND_CONTROL_LOCK = "controlLock";
+  /// Command to reset eKeys.
   static const String COMMAND_RESET_EKEY = "resetEkey";
+  /// Command to create a custom passcode.
   static const String COMMAND_CREATE_CUSTOM_PASSCODE = "createCustomPasscode";
+  /// Command to modify a passcode.
   static const String COMMAND_MODIFY_PASSCODE = "modifyPasscode";
+  /// Command to delete a passcode.
   static const String COMMAND_DELETE_PASSCODE = "deletePasscode";
+  /// Command to reset passcodes.
   static const String COMMAND_RESET_PASSCODE = "resetPasscodes";
+  /// Command to get all valid passcodes.
   static const String COMMAND_GET_ALL_VALID_PASSCODE = "getAllValidPasscode";
+  /// Command to modify the admin passcode.
   static const String COMMAND_MODIFY_ADMIN_PASSCODE = "modifyAdminPasscode";
+  /// Command to get the admin passcode.
   static const String COMMAND_GET_ADMIN_PASSCODE =
       "getAdminPasscodeWithLockData";
+  /// Command to set the admin erase passcode.
   static const String COMMAND_SET_ADMIN_ERASE_PASSCODE =
       "setAdminErasePasscode";
 
+  /// Command to get passcode verification parameters.
   static const String COMMAND_GET_PASSCODE_VERIFICATION_PARAMS =
       "getPasscodeVerificationParamsWithLockData";
+  /// Command to recover a passcode.
   static const String COMMAND_RECOVER_PASSCODE =
       "recoverPasscodeWithPasswordType";
 
+  /// Command to add a card.
   static const String COMMAND_ADD_CARD = "addCard";
+  /// Command to modify a card.
   static const String COMMAND_MODIFY_CARD = "modifyIcCard";
+  /// Command to delete a card.
   static const String COMMAND_DELETE_CARD = "deleteIcCard";
+  /// Command to clear all cards.
   static const String COMMAND_CLEAR_ALL_CARD = "clearAllIcCard";
+  /// Command to get all valid cards.
   static const String COMMAND_GET_ALL_VALID_CARD = "getAllValidIcCard";
+  /// Command to recover a card.
   static const String COMMAND_RECOVER_CARD = "recoverCardWithCardType";
+  /// Command to report a lost card.
   static const String COMMAND_REPORT_LOSS_CARD = "reportLossCard";
 
+  /// Command to add a fingerprint.
   static const String COMMAND_ADD_FINGERPRINT = "addFingerprint";
+  /// Command to modify a fingerprint.
   static const String COMMAND_MODIFY_FINGERPRINT = "modifyFingerprint";
+  /// Command to delete a fingerprint.
   static const String COMMAND_DELETE_FINGERPRINT = "deleteFingerprint";
+  /// Command to clear all fingerprints.
   static const String COMMAND_CLEAR_ALL_FINGERPRINT = "clearAllFingerprint";
+  /// Command to get all valid fingerprints.
   static const String COMMAND_GET_ALL_VALID_FINGERPRINT =
       "getAllValidFingerprint";
 
+  /// Command to set the lock time.
   static const String COMMAND_SET_LOCK_TIME = "setLockTime";
+  /// Command to get the lock time.
   static const String COMMAND_GET_LOCK_TIME = "getLockTime";
+  /// Command to get the lock operate record.
   static const String COMMAND_GET_LOCK_OPERATE_RECORD = "getLockOperateRecord";
+  /// Command to get the lock power.
   static const String COMMAND_GET_LOCK_POWER = "getLockPower";
+  /// Command to get the lock switch state.
   static const String COMMAND_GET_LOCK_SWITCH_STATE = "getLockSwitchState";
+  /// Command to get the lock system info.
   static const String COMMAND_GET_LOCK_SYSTEM_INFO =
       "getLockSystemInfoWithLockData";
+  /// Command to get the lock feature value.
   static const String COMMAND_GET_LOCK_FRETURE_VALUE = "getLockFreatureValue";
 
+  /// Command to get the lock automatic locking periodic time.
   static const String COMMAND_GET_AUTOMATIC_LOCK_PERIODIC_TIME =
       "getLockAutomaticLockingPeriodicTime";
+  /// Command to set the lock automatic locking periodic time.
   static const String COMMAND_SET_AUTOMATIC_LOCK_PERIODIC_TIME =
       "setLockAutomaticLockingPeriodicTime";
 
+  /// Command to get the lock remote unlock switch state.
   static const String COMMAND_GET_LOCK_REMOTE_UNLOCK_SWITCH_STATE =
       "getLockRemoteUnlockSwitchState";
+  /// Command to set the lock remote unlock switch state.
   static const String COMMAND_SET_LOCK_REMOTE_UNLOCK_SWITCH_STATE =
       "setLockRemoteUnlockSwitchState";
 
+  /// Command to get the lock config.
   static const String COMMAND_GET_LOCK_CONFIG = "getLockConfig";
+  /// Command to set the lock config.
   static const String COMMAND_SET_LOCK_CONFIG = "setLockConfig";
 
+  /// Command to add a passage mode.
   static const String COMMAND_ADD_PASSAGE_MODE = "addPassageMode";
+  /// Command to clear all passage modes.
   static const String COMMAND_CLEAR_ALL_PASSAGE_MODE = "clearAllPassageModes";
+  /// Command to check if a function is supported.
   static const String COMMAND_FUNCTION_SUPPORT = "functionSupport";
 
+  /// Command to activate lift floors.
   static const String COMMAND_ACTIVE_LIFT_FLOORS = "activateLiftFloors";
 
+  /// Command to set lift controllable floors.
   static const String COMMAND_SET_LIFT_CONTROL_ABLE_FLOORS =
       "setLiftControlableFloors";
+  /// Command to set lift work mode.
   static const String COMMAND_SET_LIFT_WORK_MODE = "setLiftWorkMode";
 
+  /// Command to set power saver work mode.
   static const String COMMAND_SET_POWER_SAVER_WORK_MODE =
       "setPowerSaverWorkMode";
+  /// Command to set power saver controllable.
   static const String COMMAND_SET_POWER_SAVER_CONTROL_ABLE =
       "setPowerSaverControlable";
 
+  /// Command to set NB server address.
   static const String COMMAND_SET_NB_ADDRESS = "setNBServerAddress";
+  /// Command to set NB awake modes.
   static const String COMMAND_SET_NB_AWAKE_MODES = "setNBAwakeModes";
+  /// Command to get NB awake modes.
   static const String COMMAND_GET_NB_AWAKE_MODES = "getNBAwakeModes";
+  /// Command to set NB awake times.
   static const String COMMAND_SET_NB_AWAKE_TIMES = "setNBAwakeTimes";
+  /// Command to get NB awake times.
   static const String COMMAND_GET_NB_AWAKE_TIMES = "getNBAwakeTimes";
 
+  /// Command to set door sensor switch.
   static const String COMMAND_SET_DOOR_SENSOR_SWITCH = "setDoorSensorSwitch";
+  /// Command to get door sensor switch.
   static const String COMMAND_GET_DOOR_SENSOR_SWITCH = "getDoorSensorSwitch";
+  /// Command to get door sensor state.
   static const String COMMAND_GET_DOOR_SENSOR_STATE = "getDoorSensorState";
 
+  /// Command to set hotel card sector.
   static const String COMMAND_SET_HOTEL_CARD_SECTOR = "setHotelCardSector";
+  /// Command to set hotel info.
   static const String COMMAND_SET_HOTEL_INFO = "setHotelInfo";
 
+  /// Command to get the lock version.
   static const String COMMAND_GET_LOCK_VERSION = "getLockVersion";
 
+  /// Command to scan for Wi-Fi.
   static const String COMMAND_SCAN_WIFI = "scanWifi";
+  /// Command to configure Wi-Fi.
   static const String COMMAND_CONFIG_WIFI = "configWifi";
+  /// Command to configure the server.
   static const String COMMAND_CONFIG_SERVER = "configServer";
+  /// Command to get Wi-Fi info.
   static const String COMMAND_GET_WIFI_INFO = "getWifiInfo";
+  /// Command to configure IP.
   static const String COMMAND_CONFIG_IP = "configIp";
 
+  /// Command to set the lock sound with sound volume.
   static const String COMMAND_SET_LOCK_SOUND_WITH_SOUND_VOLUME =
       "setLockSoundWithSoundVolume";
+  /// Command to get the lock sound with sound volume.
   static const String COMMAND_GET_LOCK_SOUND_WITH_SOUND_VOLUME =
       "getLockSoundWithSoundVolume";
 
+  /// Command to set the lock to enter upgrade mode.
   static const String COMMAND_SET_LOCK_ENTER_UPGRADE_MODE =
       "setLockEnterUpgradeMode";
 
+  /// Command to add a lock remote key.
   static const String COMMAND_ADD_LOCK_REMOTE_KEY = "lockAddRemoteKey";
+  /// Command to delete a lock remote key.
   static const String COMMAND_DELETE_LOCK_REMOTE_KEY = "lockDeleteRemoteKey";
+  /// Command to set the lock remote key valid date.
   static const String COMMAND_SET_LOCK_REMOTE_KEY_VALID_DATE =
       "lockModifyRemoteKeyValidDate";
+  /// Command to clear the remote key.
   static const String COMMAND_CLEAR_REMOTE_KEY = "clearRemoteKey";
+  /// Command to get the lock remote accessory electric quantity.
   static const String COMMAND_GET_LOCK_REMOTE_ACCESSORY_ELECTRIC_QUANTITY =
       "lockGetRemoteAccessoryElectricQuantity";
 
+  /// Command to add a lock door sensor.
   static const String COMMAND_ADD_LOCK_DOOR_SENSORY = "lockAddDoorSensor";
+  /// Command to delete a lock door sensor.
   static const String COMMAND_DELETE_LOCK_DOOR_SENSORY = "lockDeleteDoorSensor";
+  /// Command to set the lock door sensor alert time.
   static const String COMMAND_SET_LOCK_DOOR_SENSORY_ALERT_TIME =
       "lockSetDoorSensorAlertTime";
 
+  /// Command to get the lock direction.
   static const String COMMAND_GET_LOCK_DIRECTION = "getLockDirection";
+  /// Command to set the lock direction.
   static const String COMMAND_SET_LOCK_DIRECTION = "setLockDirection";
+  /// Command to reset the lock by code.
   static const String COMMAND_RESET_LOCK_BY_CODE = "resetLockByCode";
 
+  /// Command to verify the lock.
   static const String COMMAND_VERIFY_LOCK = "verifyLock";
 
+  /// Command to add a face.
   static const String COMMAND_ADD_FACE = "faceAdd";
+  /// Command to add face data.
   static const String COMMAND_ADD_FACE_DATA = "faceDataAdd";
+  /// Command to modify a face.
   static const String COMMAND_MODIFY_FACE = "faceModify";
+  /// Command to delete a face.
   static const String COMMAND_DELETE_FACE = "faceDelete";
+  /// Command to clear all faces.
   static const String COMMAND_CLEAR_FACE = "faceClear";
+  /// Command to set the working time.
   static const String COMMAND_SET_WORKING_TIME = "setLockWorkingTime";
 
   // static const String COMMAND_GET_PASSCODE_VERIFICATION_PARAMS = "getPasscodeVerificationParams";
@@ -2782,7 +2870,8 @@ typedef TTWifiLockGetWifiInfoCallback = void Function(TTWifiInfoModel wifiInfo);
 /// A callback that returns the lock's sound volume setting.
 typedef TTGetLockSoundWithSoundVolumeCallback = void Function(
     TTSoundVolumeType ttLockSoundVolumeType);
-// typedef TTGetPasscodeVerificationParamsCallback = void Function(String lockData);
+/// A callback for getting passcode verification parameters.
+typedef TTGetPasscodeVerificationParamsCallback = void Function(String lockData);
 
 /// A callback for failed remote accessory operations.
 typedef TTRemoteFailedCallback = void Function(

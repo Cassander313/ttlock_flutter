@@ -19,8 +19,9 @@ To use this plugin, add `ttlock_flutter` as a dependency in your `pubspec.yaml` 
 
 ```yaml
 dependencies:
-  ttlock_flutter: ^latest_version
+  ttlock_flutter:
 ```
+Please check the [GitHub repository](https://github.com/ttlock/ttlock_flutter) for the latest version.
 
 ### iOS Configuration
 
